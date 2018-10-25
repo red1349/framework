@@ -1,0 +1,31 @@
+<div class="dropdown-wrapper"
+     #dropdownWrapper
+     [ngClass]="outerClassList">
+
+  <button mat-button
+          class="btn-label"
+          #labelEl
+          [ngClass]="labelClassList">{{btnLabel}}</button>
+
+  <ul
+      class="dropdown"
+      [class.open]="!collapsed"
+      [class.hidden]="collapsed"
+      [class.not-main]="!hasSublevel"
+      #dropdownList
+      [ngClass]="dropdownClassList">
+    <li *ngFor="let item of dropdownItems">
+      <app-dropdown-menu [btnLabel]="item.btnLabel"
+                         [possition]="item.possition"
+                         [collapsable]="item.collapsable"
+                         [collapsed]="item.collapsed"
+                         [dropdownItems]="item.dropdownItems"
+                         [hasSublevel]="item.hasSublevel"
+                         [outerClassList]="item.outerClassList"
+                         [labelClassList]="item.labelClassList"
+                         [dropdownClassList]="item.dropdownClassList"
+                         [parentEl]="dropdownEl"></app-dropdown-menu>
+    </li>
+  </ul>
+
+</div>

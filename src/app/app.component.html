@@ -1,0 +1,33 @@
+<div class="main">
+
+  <div class="menu-container" 
+       *ngIf="dropdownData$ | async as dropdownData">
+    <app-dropdown-menu [btnLabel]="dropdownData.btnLabel"
+                       [collapsable]="dropdownData.collapsable"
+                       [collapsed]="dropdownData.collapsed"
+                       [url]="dropdownData.url"
+                       [hasSublevel]="dropdownData.hasSublevel"
+                       [possition]="dropdownData.possition"
+                       [outerClassList]="dropdownData.outerClassList"
+                       [labelClassList]="dropdownData.labelClassList"
+                       [dropdownClassList]="dropdownData.dropdownClassList"
+                       [dropdownItems]="dropdownData.dropdownItems"></app-dropdown-menu>
+  </div>
+  <div class="page-content">
+    <p>Some text goes here to properly show that possition of dropdown is absolute.</p>
+    <p>Some text goes here to properly show that possition of dropdown is absolute.</p>
+    <p>Some text goes here to properly show that possition of dropdown is absolute.</p>
+    <p>Some text goes here to properly show that possition of dropdown is absolute.</p>
+    <p>Some text goes here to properly show that possition of dropdown is absolute.</p>
+    <p>Some text goes here to properly show that possition of dropdown is absolute.</p>
+    <p>Some text goes here to properly show that possition of dropdown is absolute.</p>
+    <p>Some text goes here to properly show that possition of dropdown is absolute.</p>
+    <p>Some text goes here to properly show that possition of dropdown is absolute.</p>
+    <p>Some text goes here to properly show that possition of dropdown is absolute.</p>
+    <p>Some text goes here to properly show that possition of dropdown is absolute.</p>
+    <p>Some text goes here to properly show that possition of dropdown is absolute.</p>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
